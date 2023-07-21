@@ -1,4 +1,4 @@
-mport runGame from '../src/index.js';
+import runGame from '../src/index.js';
 import { getRandomNumber } from '../src/utils.js';
 
 const operationSymbols = ['+', '-', '*'];
