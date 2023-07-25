@@ -7,8 +7,6 @@ export default (description, getQuestionAndAnswer) => {
 	  const playerName = readlineSync.question('May I have your name? ');
 	  console.log(`Hello, ${playerName}!`);
 
-	  console.log(description);
-
 	  for (let i = 0; i < roundsCount; i += 1) {
 		      const [question, correctAnswer] = getQuestionAndAnswer();
 		      console.log(`Question: ${question}`);
