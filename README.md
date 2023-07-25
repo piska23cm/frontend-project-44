@@ -11,6 +11,23 @@
 3. Определение четного числа.
 4. Определение наибольшего общего делителя.
 5. Определение простого числа.
-Пример игры:
+
+Для установки игр, напишите команду "sudo npm link"
+
+
+Пример игры "Проверка на чётность" :
 https://asciinema.org/a/598425
+
+Пример игры "Калькулятор"
+https://asciinema.org/a/OegWHwkDOXYfHO7YmxmedYNPp
+
+Пример игры "НОД"
+https://asciinema.org/a/GqIvz9AuhL3Y9UiyMYS55qO58
+
+Пример игры "Арифметическая прогрессиия"
+https://asciinema.org/a/bhtWnimXslZrqnNiFTaKpBSsW
+
+Пример игры "Простое ли число?"
+https://asciinema.org/a/wAVaLs6xgWOCwwea9kOAGM1sT
+
 )

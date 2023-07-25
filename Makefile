@@ -24,3 +24,6 @@ brain-progression:
 
 brain-progression: 
 	node bin/brain-prime.js
+
+brain-progression: 
+		node bin/brain-prime.js
