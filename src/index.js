@@ -22,4 +22,3 @@ export default (description, generateRound) => {
 
 	  console.log(`Congratulations, ${playerName}!`);
 };
-};
