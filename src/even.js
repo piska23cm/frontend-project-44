@@ -1,14 +1,20 @@
-import runGame from '../src/index.js';
-import {
-	  getRandomNumber,
-	  isEvenNumber,
-} from '../src/utils.js';
+#!/usr/bin/env node
+import { getRandomNumber } from '../src/utils.js';
+import run from '../src/index.js';
+
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-const getQuestionAndAnswer = () => {
-	  const question = getRandomNumber(0, 100);
-	  const correctAnswer = isEvenNumber(question) ? 'yes' : 'no';
+const minRange = 0;
+const maxRange = 100;
+
+const isEven = (number) => (number % 2 === 0);
+
+const generateRound = () => {
+	  const number = getRandomNumber(minRange, maxRange);
+	  const question = number.toString();
+	  const correctAnswer = isEven(number) ? 'yes' : 'no';
 	  return [question, correctAnswer];
 };
+
 export default () => {
-	  runGame(description, getQuestionAndAnswer);
+	  run(description, generateRound);
 };
