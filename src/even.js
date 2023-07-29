@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../src/utils.js';
-import run from '../src/index.js';
+import { getRandomNumber } from '../utils.js';
+import run from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const minRange = 0;
