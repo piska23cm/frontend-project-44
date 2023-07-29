@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../utils.js';
-import run from '../index.js';
+import { getRandomNumber } from '../src/utils.js';
+import run from '../src/index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 const minRange = 0;
