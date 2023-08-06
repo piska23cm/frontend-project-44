@@ -7,7 +7,7 @@ const minRange = 0;
 const maxRange = 50;
 
 const calculate = (x, y, operator) => {
-   switch (operator) {
+  switch (operator) {
     case '+':
       return x + y;
     case '-':
@@ -16,7 +16,7 @@ const calculate = (x, y, operator) => {
       return x * y;
     default:
       throw new Error(`There is no such operator like '${operator}'!`);
-	  }
+}
 };
 
 const generateRound = () => {
