@@ -10,26 +10,26 @@ const maxRange = 100;
 const minStep = 1;
 const maxStep = 10;
 
-const buildProgression = (length, start, step) => { 
-const progression = [];
-for (let i = start; progression.length < length; i += step) {
-progression.push(i);
-}
-return progression;
+const buildProgression = (length, start, step) => {
+	  const progression = [];
+	  for (let i = start; progression.length < length; i += step) {
+		      progression.push(i);
+		    }
+	  return progression;
 };
 
 const generateRound = () => {
-const length = getRandomNumber(minLength, maxLength);
-const start = getRandomNumber(minRange, maxRange);
-const step = getRandomNumber(minStep, maxStep);
-const progression = buildProgression(length, start, step);
-const indexHiddenNumber = getRandomIndex(progression);
-const correctAnswer = progression[indexHiddenNumber].toString();
-progression[indexHiddenNumber] = '..';
-const question = progression.join(' ');
-return [question, correctAnswer];
+	  const length = getRandomNumber(minLength, maxLength);
+	  const start = getRandomNumber(minRange, maxRange);
+	  const step = getRandomNumber(minStep, maxStep);
+	  const progression = buildProgression(length, start, step);
+	  const indexHiddenNumber = getRandomIndex(progression);
+	  const correctAnswer = progression[indexHiddenNumber].toString();
+	  progression[indexHiddenNumber] = '..';
+	  const question = progression.join(' ');
+	  return [question, correctAnswer];
 };
 
 export default () => {
-run(description, generateRound);
+	  run(description, generateRound);
 };
