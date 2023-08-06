@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { getRandomNumber, getRandomIndex } from '../src/utils.js';
-import run from '../src/index.js';
+import { getRandomNumber, getRandomIndex } from '../utils.js';
+import run from '../index.js';
 
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
@@ -10,13 +10,13 @@ const maxRange = 50;
 const calculate = (x, y, operator) => {
   switch (operator) {
     case '+':
-     return x + y;
+      return x + y;
     case '-':
-     return x - y;
+      return x - y;
     case '*':
-     return x * y;
+      return x * y;
     default:
-     throw new Error(`There is no such operator like '${operator}'!`);
+      throw new Error(`There is no such operator like '${operator}'!`);
 }
 };
 
