@@ -9,15 +9,15 @@ const maxRange = 50;
 
 const calculate = (x, y, operator) => {
   switch (operator) {
-   case '+':
-    return x + y;
-   case '-':
-    return x - y;
-   case '*':
-    return x * y;
-   default:
-    throw new Error(`There is no such operator like '${operator}'!`);
-			    }
+    case '+':
+     return x + y;
+    case '-':
+     return x - y;
+    case '*':
+     return x * y;
+    default:
+     throw new Error(`There is no such operator like '${operator}'!`);
+}
 };
 
 const generateRound = () => {
