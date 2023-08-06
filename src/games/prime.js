@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../src/utils.js';
-import run from '../src/index.js';
+import { getRandomNumber } from '../utils.js';
+import run from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const minRange = 0;
