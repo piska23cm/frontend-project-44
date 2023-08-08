@@ -16,7 +16,7 @@ const calculate = (x, y, operator) => {
       return x * y;
     default:
       throw new Error(`There is no such operator like '${operator}'!`);
-}
+  }
 };
 
 const generateRound = () => {

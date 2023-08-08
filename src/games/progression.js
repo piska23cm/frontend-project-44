@@ -13,8 +13,8 @@ const maxStep = 10;
 const buildProgression = (length, start, step) => {
   const progression = [];
   for (let i = start; progression.length < length; i += step) {
-  progression.push(i);
-}
+    progression.push(i);
+  }
   return progression;
 };
 

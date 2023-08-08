@@ -1,14 +1,12 @@
-/*global console*/
 import readlineSync from 'readline-sync';
 
 const attemptsCount = 3;
 
 export default (description, generateRound) => {
 	  console.log('Welcome to the Brain Games!'); // eslint-disable-line no-console
-	  const playerName = readlineSync.question('May I have your name? ');
-	  console.log(`Hello, ${playerName}!`);
-	  console.log(description);
-
+  const playerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${playerName}!`);
+  console.log(description);
 	  for (let i = 1; i <= attemptsCount; i += 1) {
 		      const [question, correctAnswer] = generateRound();
 		      console.log(`Question: ${question}`);
