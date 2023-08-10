@@ -1,33 +1,34 @@
-import { getRandomNumber, getRandomIndex } from '../utils.js';
-import run from '../index.js';
+import runGame from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
+const operationSymbols = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
-const operators = ['+', '-', '*'];
-const minRange = 0;
-const maxRange = 50;
 
-const calculate = (x, y, operator) => {
-  switch (operator) {
-    case '+':
-      return x + y;
-    case '-':
-      return x - y;
-    case '*':
-      return x * y;
-    default:
-      throw new Error(`There is no such operator like '${operator}'!`);
-  }
+const getRandomOperationSymbol = (symbols) => {
+  const symbolsLength = symbols.length;
+  const randomIndex = getRandomNumber(0, symbolsLength);
+  const randomSymbol = symbols[randomIndex];
+  return randomSymbol;
 };
 
-const generateRound = () => {
-  const number1 = getRandomNumber(minRange, maxRange);
-  const number2 = getRandomNumber(minRange, maxRange);
-  const operator = operators[getRandomIndex(operators)];
-  const question = `${number1} ${operator} ${number2}`;
-  const correctAnswer = calculate(number1, number2, operator).toString();
+const calcArithmeticOperation = (symbol, firstValue, secondValue) => {
+  switch (symbol) {
+    case '+': return firstValue + secondValue;
+    case '-': return firstValue - secondValue;
+    case '*': return firstValue * secondValue;
+    default: return null;
+    }
+};
+
+const getQuestionAndAnswer = () => {
+  const randomSymbol = getRandomOperationSymbol(operationSymbols);
+  const firstNumber = getRandomNumber(0, 10);
+  const secondNubmer = getRandomNumber(0, 10);
+  const question = `${firstNumber} ${randomSymbol} ${secondNubmer}`;
+  const correctAnswer = String(calcArithmeticOperation(randomSymbol, firstNumber, secondNubmer));
   return [question, correctAnswer];
 };
 
 export default () => {
-  run(description, generateRound);
+  runGame(description, getQuestionAndAnswer);
 };
