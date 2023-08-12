@@ -1,3 +1,6 @@
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const getRandomNumber = (minRange, maxRange) => {
+	  const randomNumber = Math.floor(Math.random() * (maxRange - minRange) + minRange);
+	  return randomNumber;
+};
 
-export { getRandomNumber };
+export const isEvenNumber = (number) => number % 2 === 0;
