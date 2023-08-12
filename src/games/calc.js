@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { getRandomNumber, getRandomIndex } from '../utils.js';
+import { getRandomNumber} from '../utils.js';
 import run from '../index.js';
 
 const description = 'What is the result of the expression?';
@@ -21,6 +21,7 @@ const calculate = (x, y, operator) => {
 };
 
 const generateRound = () => {
+  const getRandomIndex = (data) => Math.floor(Math.random() * data.length);
   const number1 = getRandomNumber(minRange, maxRange);
   const number2 = getRandomNumber(minRange, maxRange);
   const operator = operators[getRandomIndex(operators)];
