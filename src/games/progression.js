@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { getRandomNumber, getRandomIndex } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 import run from '../index.js';
 
 const description = 'What number is missing in the progression?';
@@ -17,8 +17,8 @@ const buildProgression = (length, start, step) => {
   }
   return progression;
 };
-
 const generateRound = () => {
+  const getRandomIndex = (data) => Math.floor(Math.random() * data.length);
   const length = getRandomNumber(minLength, maxLength);
   const start = getRandomNumber(minRange, maxRange);
   const step = getRandomNumber(minStep, maxStep);
